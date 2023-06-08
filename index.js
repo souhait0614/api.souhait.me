@@ -1,8 +1,15 @@
 // @ts-check
-import { serve } from '@hono/node-server'
-import { Hono } from 'hono'
+import { serve } from "@hono/node-server";
+import { Hono } from "hono";
 
-const app = new Hono()
-app.get('/', (c) => c.text('Hello Hono!'))
+const setHeader = (c) => {
+  c.header("Access-Control-Allow-Origin", "*")
+}
 
-serve(app)
+const app = new Hono();
+app.get("/", (c) => {
+  setHeader(c)
+  return c.text("Hello Hono!");
+});
+
+serve(app);
