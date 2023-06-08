@@ -8,12 +8,21 @@ dependencies:
     specifier: ^3.2.2
     version: 3.2.2
 
+devDependencies:
+  '@types/node':
+    specifier: ^20.2.5
+    version: 20.2.5
+
 packages:
 
   /@hono/node-server@1.0.1:
     resolution: {integrity: sha512-sNnTdguCJKclHdzyn054q/2/XO7EswUW3TPRQT3NSBpZwWl7EOLYAgnCImjIJHPawV71Y/R1fFyuCjJFWrnI9A==}
     engines: {node: '>=18.0.0'}
     dev: false
+
+  /@types/node@20.2.5:
+    resolution: {integrity: sha512-JJulVEQXmiY9Px5axXHeYGLSjhkZEnD+MDPDGbCbIAbMslkKwmygtZFy1X6s/075Yo94sf8GuSlFfPzysQrWZQ==}
+    dev: true
 
   /hono@3.2.2:
     resolution: {integrity: sha512-yVkYyefATYGz6j7iDcugtEvg4AgpccE1tDYnmvTmXDR4NQrUJ3/SdHU9V7UuWQjGtfrBujeBUAq70oc82ADsvA==}
