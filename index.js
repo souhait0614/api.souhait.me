@@ -2,6 +2,9 @@
 import { serve } from "@hono/node-server";
 import { Hono } from "hono";
 
+/**
+ * @param {import("hono").Context} c
+ */
 const setHeader = (c) => {
   c.header("Access-Control-Allow-Origin", "*")
 }
