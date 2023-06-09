@@ -4,14 +4,29 @@ dependencies:
   '@hono/node-server':
     specifier: ^1.0.2
     version: 1.0.2
+  highlight.js:
+    specifier: ^11.8.0
+    version: 11.8.0
   hono:
     specifier: ^3.2.5
     version: 3.2.5
+  marked:
+    specifier: ^5.0.5
+    version: 5.0.5
+  marked-highlight:
+    specifier: ^2.0.1
+    version: 2.0.1(marked@5.0.5)
 
 devDependencies:
   '@tsconfig/strictest':
     specifier: ^2.0.1
     version: 2.0.1
+  '@types/marked':
+    specifier: ^5.0.0
+    version: 5.0.0
+  '@types/marked-highlight':
+    specifier: node_modules/marked-highlight/src/
+    version: link:node_modules/marked-highlight/src
   '@types/node':
     specifier: ^20.2.5
     version: 20.2.5
@@ -393,6 +408,10 @@ packages:
 
   /@types/json5@0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: true
+
+  /@types/marked@5.0.0:
+    resolution: {integrity: sha512-YcZe50jhltsCq7rc9MNZC/4QB/OnA2Pd6hrOSTOFajtabN+38slqgDDCeE/0F83SjkKBQcsZUj7VLWR0H5cKRA==}
     dev: true
 
   /@types/node@20.2.5:
@@ -1522,6 +1541,11 @@ packages:
       function-bind: 1.1.1
     dev: true
 
+  /highlight.js@11.8.0:
+    resolution: {integrity: sha512-MedQhoqVdr0U6SSnWPzfiadUcDHfN/Wzq25AkXiQv9oiOO/sG0S7XkvpFIqWBl9Yq1UYyYOOVORs5UW2XlPyzg==}
+    engines: {node: '>=12.0.0'}
+    dev: false
+
   /hono@3.2.5:
     resolution: {integrity: sha512-saAKnPNGXO3vLq198IJO6ZwunQyXOYj6FkAZS08pBNKXn34lF9b7vb/pdyTrQWv3WvUPFjGCQfDyUjMhcubAMw==}
     engines: {node: '>=16.0.0'}
@@ -1816,6 +1840,20 @@ packages:
     dependencies:
       yallist: 4.0.0
     dev: true
+
+  /marked-highlight@2.0.1(marked@5.0.5):
+    resolution: {integrity: sha512-LDUfR/zDvD+dJ+lQOWHkxvBLNxiXcaN8pBtwJ/i4pI0bkDC/Ef6Mz1qUrAuHXfnpdr2rabdMpVFhqFuU+5Mskg==}
+    peerDependencies:
+      marked: ^4 || ^5
+    dependencies:
+      marked: 5.0.5
+    dev: false
+
+  /marked@5.0.5:
+    resolution: {integrity: sha512-auTmKJTBwZM/GLVFOhmkY7pL8v/0DxiDaXRC2kEyajcNJ0XXn9NphLD0106dbWrbPwcyD4Y0Dus16OkCzUMkfg==}
+    engines: {node: '>= 18'}
+    hasBin: true
+    dev: false
 
   /memorystream@0.3.1:
     resolution: {integrity: sha512-S3UwM3yj5mtUSEfP41UZmt/0SCoVYUcU1rkXv+BQ5Ig8ndL4sPoJNBUJERafdPb5jjHJGuMgytgKvKIf58XNBw==}

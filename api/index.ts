@@ -1,8 +1,7 @@
 import { serve } from "@hono/node-server"
 import { Hono } from "hono"
 
-import { Layout } from "../src/Layout"
-import { Main } from "../src/Main"
+import { Index } from "../src/Index"
 
 const routePath = {
   root: "/",
@@ -17,7 +16,7 @@ const routePath = {
 // }
 
 const app = new Hono()
-app.get(routePath.root, async (c) => c.html(Layout({ children: Main() })))
+app.get(routePath.root, async (c) => c.html(Index()))
 
 // app.post(routePath.cjp, (c) => {
 //   try {
