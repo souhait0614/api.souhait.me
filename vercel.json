@@ -2,9 +2,9 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
   "functions": {
-    "/api/index.ts": {
+    "api/index.ts": {
       "includeFiles": "/assets/*"
     }
   },
-  "rewrites": [{ "source": "/(.*)", "destination": "/api/index.ts" }]
+  "rewrites": [{ "source": "/(.*)", "destination": "api/index.ts" }]
 }
