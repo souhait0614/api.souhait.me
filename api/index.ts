@@ -1,10 +1,8 @@
-import { readFile } from "fs/promises"
-import path from "path"
-
 import { serve } from "@hono/node-server"
 import { Hono } from "hono"
 
-const html = readFile(path.resolve(__dirname, "../src/index.html"))
+import { Layout } from "../src/Layout"
+import { Main } from "../src/Main"
 
 const routePath = {
   root: "/",
@@ -19,7 +17,7 @@ const routePath = {
 // }
 
 const app = new Hono()
-app.get(routePath.root, async (c) => c.html((await html).toString()))
+app.get(routePath.root, async (c) => c.html(Layout({ children: Main() })))
 
 // app.post(routePath.cjp, (c) => {
 //   try {

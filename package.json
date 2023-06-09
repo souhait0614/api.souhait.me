@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "tsx api/index.ts",
+    "start": "tsx watch api/index.ts",
     "lint": "npm-run-all -p lint:*",
     "lint:eslint": "eslint api/",
     "fix": "npm-run-all -p fix:*",
