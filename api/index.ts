@@ -4,7 +4,7 @@ import path from "path"
 import { serve } from "@hono/node-server"
 import { Hono } from "hono"
 
-const html = readFile(path.resolve(__dirname, "../assets/index.html"))
+const html = readFile(path.resolve(__dirname, "../src/index.html"))
 
 const routePath = {
   root: "/",
