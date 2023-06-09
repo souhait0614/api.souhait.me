@@ -27,7 +27,7 @@ type ResponseBody = {
 ```typescript
 type RequestBody = {
   input: string
-  lv?: 1 | 2 | 3 | 4
+  level?: 1 | 2 | 3 | 4
 }
 
 type ResponseBody = {
