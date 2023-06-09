@@ -1,9 +1,10 @@
 import { readFile } from "fs/promises"
+import path from "path"
 
 import { serve } from "@hono/node-server"
 import { Hono } from "hono"
 
-const html = readFile("/assets/index.html")
+const html = readFile(path.resolve(__dirname, "../assets/index.html"))
 
 const routePath = {
   root: "/",
