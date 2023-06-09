@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "tsx watch api/index.ts",
+    "start": "dotenv -e .env tsx watch api/index.ts",
     "lint": "npm-run-all -p lint:*",
     "lint:eslint": "eslint api/",
     "fix": "npm-run-all -p fix:*",
@@ -9,18 +9,21 @@
   },
   "dependencies": {
     "@hono/node-server": "^1.0.2",
+    "cjp": "^2.3.1",
+    "genhera": "^1.1.0",
     "highlight.js": "^11.8.0",
     "hono": "^3.2.5",
     "marked": "^5.0.5",
-    "marked-highlight": "^2.0.1"
+    "marked-highlight": "^2.0.1",
+    "nomlish-translator-node": "^1.0.2"
   },
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.1",
     "@types/marked": "^5.0.0",
     "@types/node": "^20.2.5",
-    "@types/marked-highlight": "node_modules/marked-highlight/src/",
     "@typescript-eslint/eslint-plugin": "^5.59.9",
     "@typescript-eslint/parser": "^5.59.9",
+    "dotenv-cli": "^7.2.1",
     "eslint": "^8.42.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
