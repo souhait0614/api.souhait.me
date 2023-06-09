@@ -1,11 +1,11 @@
 {
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "start": "ts-node api/index.ts",
     "lint": "npm-run-all -p lint:*",
-    "lint:eslint": "eslint src/",
+    "lint:eslint": "eslint api/",
     "fix": "npm-run-all -p fix:*",
-    "fix:eslint": "eslint --fix src/",
-    "fix:prettier": "prettier --write src/"
+    "fix:eslint": "eslint --fix api/",
+    "fix:prettier": "prettier --write assets/ api/"
   },
   "dependencies": {
     "@hono/node-server": "^1.0.2",

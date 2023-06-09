@@ -3,7 +3,7 @@ import { readFile } from "fs/promises"
 import { serve } from "@hono/node-server"
 import { Hono } from "hono"
 
-const html = readFile("src/index.html")
+const html = readFile("/assets/index.html")
 
 const routePath = {
   root: "/",
