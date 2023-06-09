@@ -2,9 +2,10 @@ import { serve } from "@hono/node-server"
 import cjp from "cjp"
 import genhera from "genhera"
 import { Hono } from "hono"
+import { minify } from "html-minifier-terser"
 import { Translator } from "nomlish-translator-node"
 
-import { Index } from "../src/Index"
+import { index } from "../src"
 
 import type { Context } from "hono"
 
@@ -40,10 +41,23 @@ const setHeader = (c: Context) => {
   c.header("Access-Control-Allow-Origin", "*")
 }
 
+const minifiedIndex = minify(index, {
+  collapseInlineTagWhitespace: true,
+  collapseWhitespace: true,
+  removeAttributeQuotes: true,
+  removeEmptyAttributes: true,
+  removeOptionalTags: true,
+  removeRedundantAttributes: true,
+  removeTagWhitespace: true,
+  minifyCSS: true,
+  minifyJS: true,
+  minifyURLs: true,
+})
+
 const translator = new Translator()
 
 const app = new Hono()
-app.get(routePath.root, async (c) => c.html(Index()))
+app.get(routePath.root, async (c) => c.html(await minifiedIndex))
 
 app.post(routePath.cjp, async (c) => {
   try {

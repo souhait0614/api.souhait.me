@@ -13,12 +13,14 @@
     "genhera": "^1.1.0",
     "highlight.js": "^11.8.0",
     "hono": "^3.2.5",
+    "html-minifier-terser": "^7.2.0",
     "marked": "^5.0.5",
     "marked-highlight": "^2.0.1",
     "nomlish-translator-node": "^1.0.2"
   },
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.1",
+    "@types/html-minifier-terser": "^7.0.0",
     "@types/marked": "^5.0.0",
     "@types/node": "^20.2.5",
     "@typescript-eslint/eslint-plugin": "^5.59.9",

@@ -8,9 +8,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx"
+    "noEmit": true
   },
   "include": ["api", "src"]
 }
