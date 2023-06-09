@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/holiday.css@0.11.0" as="style" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.11.0" media="print"
+    onload="this.media='all'" />
+  <style>
+    :where(html) {
+      color-scheme: dark light
+    }
+  </style>
+  <title>api.souhait.me</title>
+</head>
+
+<body>
+  <header>
+    <h1>api.souhait.me</h1>
+    <p>自分用API置き場</p>
+  </header>
+  <main>
+    <section>
+      <h2>/cjp</h2>
+      <p>
+        パラメータ<code>input</code>に変換したい日本語を入れてPostすると<i>怪レい日本语</i>が返ってくる。
+      </p>
+    </section>
+    <section>
+      <h2>/genhera</h2>
+      <p>
+        パラメータ<code>input</code>に変換したい日本語を入れてPostすると<i>ﾒﾝﾍﾗっぽぃ日本語</i>が返ってくる。
+      </p>
+    </section>
+    <section>
+      <h2>/nomlish</h2>
+      <p>
+        パラメータ<code>input</code>に翻訳したい文章を入れてPostすると<i>俺だけが知ってる野村哲也…俺にはわかるんだ。行くぜ！！文章</i>が返ってくる。
+      </p>
+      <p>
+        パラメータ<code>lv</code>に1~4の数値を入れることで翻訳レベルを指定可能。デフォルトは2。
+      </p>
+    </section>
+    <section>
+      <h2>/googleRetranslate</h2>
+      <p>
+        パラメータ<code>input</code>に再翻訳したい文章を入れてPostすると<i>Google翻訳を使用して再翻訳されたテキスト</i>が返ってくる。
+      </p>
+      <p>
+        パラメータ<code>target</code>で再翻訳時に経由する言語を指定可能。デフォルトはzh(中国語)。
+      </p>
+      <p>パラメータ<code>source</code>で翻訳元・再翻訳言語を指定可能。デフォルトはja(日本語)。</p>
+    </section>
+  </main>
+</body>
+
+</html>
