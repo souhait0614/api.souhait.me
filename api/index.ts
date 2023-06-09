@@ -29,4 +29,7 @@ app.get(routePath.root, async (c) => c.html((await html).toString()))
 //   }
 // })
 
-serve(app)
+serve(app, (info) => {
+  // eslint-disable-next-line no-console
+  console.log(`Listening on http://localhost:${info.port}`)
+})
