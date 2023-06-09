@@ -45,7 +45,12 @@ export const Index = () => (
       </header>
       <main>{raw(mainHtml)}</main>
       <footer>
-        ©︎ 2023 <a href="https://souhait.me">すえ</a>
+        <div>
+          ©︎ 2023 <a href="https://souhait.me">すえ</a>
+        </div>
+        <div>
+          <a href="https://github.com/souhait0614/api.souhait.me">Source</a>
+        </div>
       </footer>
     </body>
   </html>
