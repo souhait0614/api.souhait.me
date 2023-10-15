@@ -54,8 +54,6 @@ const minifiedIndex = minify(index, {
   minifyURLs: true,
 })
 
-const translator = new Translator()
-
 const app = new Hono()
 app.get(routePath.root, async (c) => c.html(await minifiedIndex))
 
@@ -83,6 +81,7 @@ app.post(routePath.genhera, async (c) => {
 
 app.post(routePath.nomlish, async (c) => {
   try {
+    const translator = new Translator()
     setHeader(c)
     const { input, level = 2 } = await c.req.json<NomlishRequestBody>()
     if (!Number.isInteger(level) || level > 4 || level < 1) {
