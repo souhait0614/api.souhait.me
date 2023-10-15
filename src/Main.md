@@ -1,4 +1,4 @@
-## /cjp
+## POST /cjp
 
 ```typescript
 type RequestBody = {
@@ -10,7 +10,7 @@ type ResponseBody = {
 }
 ```
 
-## /genhera
+## POST /genhera
 
 ```typescript
 type RequestBody = {
@@ -22,7 +22,7 @@ type ResponseBody = {
 }
 ```
 
-## /nomlish
+## POST /nomlish
 
 ```typescript
 type RequestBody = {
@@ -35,7 +35,7 @@ type ResponseBody = {
 }
 ```
 
-## /googleRetranslate
+## POST /googleRetranslate
 
 ```typescript
 type RequestBody = {
